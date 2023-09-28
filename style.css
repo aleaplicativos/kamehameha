@@ -1,0 +1,64 @@
+body, html {
+  height: 100%;
+  background-color:#12A0FF; 
+  overflow: hidden;
+background: linear-gradient(#89afc6 0%, #5b8eb2 100%); /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ /* W3C */
+}
+#cannon {  
+  -webkit-animation-duration: 1s;  
+          animation-duration: 1s;
+  -webkit-animation-name: fly;
+          animation-name: fly;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;  
+  left:-10px; 
+  top: 0;
+  position: absolute; 
+  z-index:10;  
+  border-radius: 5px;  
+  -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none; /* From IE10 only */
+    user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+    -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+    user-drag: none;
+}
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  width:40px; 
+  height:20px;
+  background-color:#fff;
+  box-shadow: 0 0 90px 70px #fff;
+  z-index:11;
+  transform: translateX(0em);
+  transition: 1.5s;
+}
+.go {
+  transform: translateX(120em);
+}
+@-webkit-keyframes fly {
+  from {
+    margin-top: 0;    
+    margin-left: 0;
+  }
+
+  to {
+    margin-top: 10px;    
+    margin-left: -10px;
+  }
+}
+@keyframes fly {
+  from {
+    margin-top: 0;    
+    margin-left: 0;
+  }
+
+  to {
+    margin-top: 10px;    
+    margin-left: -10px;
+  }
+}
